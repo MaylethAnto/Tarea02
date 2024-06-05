@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="Tarea02.MainPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menú">
+            <StackLayout>
+                <Button Text="ITEM-1"  CommandParameter="1" />
+                <Button Text="ITEM-2"  CommandParameter="2" />
+                <Button Text="ITEM-3"  CommandParameter="3" />
+                <Button Text="ITEM-4"  CommandParameter="4" />
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage>
+                    <StackLayout>
+                        <Label Text="Selecciona un item del menú" 
+                               FontSize="Large" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
